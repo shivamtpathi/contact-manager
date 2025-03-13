@@ -1,0 +1,34 @@
+{
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease",
+        "minifyEnabled": true,
+        "shrinkResources": true,
+        "enableHermes": true
+      }
+    },
+    "preview3": {
+      "developmentClient": true,
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview4": {
+      "distribution": "internal"
+    },
+    "production": {
+      "android": {
+        "gradleCommand": ":app:bundleRelease",
+        "minifyEnabled": true,
+        "shrinkResources": true,
+        "enableHermes": true
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "contactManager",
-    "slug": "contactManager",
+    "slug": "contactmanager",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS"
+      ],
+      "package": "com.omhishiv.contactManager"
     },
     "web": {
       "bundler": "metro",
@@ -32,10 +37,25 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow $(PRODUCT_NAME) to access your contacts."
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ca8142e4-e52b-46d2-9f4f-d38473e56ab2"
+      }
+    },
+    "owner": "omhishiv"
   }
 }
